@@ -7,4 +7,4 @@ const organisateurSchema = new Schema({
 
 const Organisateur = mongoose.model("Organisateur", organisateurSchema, "Organisateur")
 
-module.exports = Organisateur;
+module.exports = { Organisateur : Organisateur };

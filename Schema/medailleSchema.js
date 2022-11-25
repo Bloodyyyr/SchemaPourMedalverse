@@ -26,5 +26,5 @@ const medailleSchema = new Schema({
 
 const Medaille = mongoose.model("Medaille", medailleSchema, "Medaille")
 
-module.exports = Medaille;
+module.exports = { Medaille : Medaille };
 

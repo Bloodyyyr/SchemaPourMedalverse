@@ -8,4 +8,4 @@ const typeSchema = new Schema({
 
 const Type = mongoose.model("Type", typeSchema, "Type")
 
-module.exports = Type;
+module.exports = { Type : Type };

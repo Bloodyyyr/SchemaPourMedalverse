@@ -10,4 +10,4 @@ const epreuveSchema = new Schema({
 
 const Epreuve = mongoose.model("Epreuve", epreuveSchema, "Epreuve")
 
-module.exports = Epreuve;
+module.exports = { Epreuve : Epreuve };

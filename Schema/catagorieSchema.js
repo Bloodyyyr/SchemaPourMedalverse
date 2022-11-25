@@ -7,4 +7,4 @@ const categorieSchema = new Schema({
 
 const Categorie = mongoose.model("Categorie", categorieSchema, "Categorie");
 
-module.exports = Categorie;
+module.exports = { Categorie : Categorie };

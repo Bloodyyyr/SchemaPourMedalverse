@@ -8,4 +8,4 @@ const sportifSchema = new Schema({
 
 const Sportif = mongoose.model("Sportif", sportifSchema, "Sportif")
 
-module.exports = Sportif;
+module.exports = { Sportif : Sportif };

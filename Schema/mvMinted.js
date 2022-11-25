@@ -20,4 +20,4 @@ const mvMintedSchema = new Schema({
 
 const MVMinted = mongoose.model("MVMinted", mvMintedSchema, "MVMinted");
 
-module.exports = MVMinted;
+module.exports = { MVMinted : MVMinted };

@@ -20,4 +20,4 @@ const mintedSchema = new Schema({
 
 const Minted = mongoose.model("Minted", mintedSchema, "Minted");
 
-module.exports = Minted;
+module.exports = { Minted : Minted };

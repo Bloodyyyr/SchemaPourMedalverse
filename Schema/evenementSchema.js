@@ -9,5 +9,5 @@ const evenementSchema = new Schema({
 
 const Evenenement = mongoose.model("Evenement", evenementSchema, "Evenement")
 
-module.exports = Evenenement;
+module.exports = { Evenenement : Evenenement };
 

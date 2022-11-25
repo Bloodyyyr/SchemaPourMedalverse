@@ -7,4 +7,4 @@ const sportSchema = new Schema({
 
 const Sport = mongoose.model("Sport", sportSchema, "Sport")
 
-module.exports = Sport;
+module.exports = { Sport : Sport };

@@ -7,4 +7,4 @@ const sexeSchema = new Schema({
 
 const Sexe = mongoose.model("Sexe", sexeSchema, "Sexe")
 
-module.exports = Sexe;
+module.exports = { Sexe : Sexe };

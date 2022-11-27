@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose; 
 
 const categorieSchema = new Schema({
+    _id: String,
     nbrParticipants: Number
 });
 

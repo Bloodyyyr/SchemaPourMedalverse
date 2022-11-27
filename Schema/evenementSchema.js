@@ -7,7 +7,7 @@ const evenementSchema = new Schema({
     labelEvenement: String
 })
 
-const Evenenement = mongoose.model("Evenement", evenementSchema, "Evenement")
+const Evenement = mongoose.model("Evenement", evenementSchema, "Evenement")
 
-module.exports = { Evenenement : Evenenement };
+module.exports = { Evenement : Evenement };
 

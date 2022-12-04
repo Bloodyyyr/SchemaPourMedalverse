@@ -43,6 +43,7 @@ app.route("/categorie")
       _id : MUUID.v4().toString('N'),
       nbrParticipants: req.body.nbrParticipants
     })
+    console.log(res)
     console.log("Post");
   })
 
@@ -152,6 +153,17 @@ app.route("/mvminted")
         console.log(err);
       }else {
         console.log(mvMinted)
+      }
+    })
+  })
+
+app.route("/mvminted/:to")
+  .get(function (req, res) {
+    MVMinted.find({to: req.params.to}, function(err, MVMinted) {
+      if(err){
+        console.log(err);
+      }else{
+        console.log(MVMinted._id)
       }
     })
   })
@@ -321,8 +333,10 @@ app.route("/type/:id")
       })
   })
 
-mongoose.connect(BDD);
+mongoose.connect(BDD, {
+  autoIndex: true
+});
 app.listen(PORT, function () {
-  console.log(`Le serveur express est en route sur le port: ${PORT}`);
+  console.log(`Le serveur express est en route sur le port: http://localhost:${PORT}`);
 });
 

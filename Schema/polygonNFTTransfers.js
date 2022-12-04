@@ -21,6 +21,6 @@ const polygonTransfersSchema = new Schema({
     value: String
 })
 
-const PolygonNFTTransfers = mongoose.model("PolygonNFTTransfers", polygonTransfersSchema)
+const PolygonNFTTransfers = mongoose.model("PolygonNFTTransfers", polygonTransfersSchema, "PolygonNFTTransfers")
 
 module.exports = { PolygonNFTTransfers : PolygonNFTTransfers };

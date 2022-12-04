@@ -21,6 +21,6 @@ const polygonTransactionsSchema = new Schema({
     value: String
 })
 
-const PolygonTransactions = mongoose.model("PolygonTransactions", polygonTransactionsSchema);
+const PolygonTransactions = mongoose.model("PolygonTransactions", polygonTransactionsSchema, "PolygonTransactions");
 
 module.exports = { PolygonTransactions : PolygonTransactions };

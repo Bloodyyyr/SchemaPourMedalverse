@@ -6,23 +6,24 @@ const bodyParser = require("body-parser");
 const MUUID = require('uuid-mongodb');
 const cors = require("cors");
 
-const { Categorie } = require("../Back/Front/Schema/catagorieSchema.js.js");
-const { Epreuve } = require("../Back/Front/Schema/epreuveSchema.js.js");
-const { Evenement } = require("../Back/Front/Schema/evenementSchema.js.js");
-const { Medaille } = require("../Back/Front/Schema/medailleSchema.js.js");
-const { Minted } = require("../Back/Front/Schema/mintedSchema.js.js");
-const { MVMinted } = require("../Back/Front/Schema/mvMinted.js.js");
-const { Organisateur } = require("../Back/Front/Schema/organisateurSchema.js.js");
-const { PolygonNFTTransfers } = require("../Back/Front/Schema/polygonNFTTransfers.js.js");
-const { PolygonTransactions } = require("../Back/Front/Schema/polygonTransaction.js.js");
-const { Sexe } = require("../Back/Front/Schema/sexeSchema.js.js");
-const { Sportif } = require("../Back/Front/Schema/sportifSchema.js.js");
-const { Sport } = require("../Back/Front/Schema/sportSchema.js.js");
-const { Type } = require("../Back/Front/Schema/typeSchema.js.js");
+const { Categorie } = require("../Schema/catagorieSchema.js");
+const { Epreuve } = require("../Schema/epreuveSchema.js");
+const { Evenement } = require("../Schema/evenementSchema.js");
+const { Medaille } = require("../Schema/medailleSchema.js");
+const { Minted } = require("../Schema/mintedSchema.js");
+const { MVMinted } = require("../Schema/mvMinted.js");
+const { Organisateur } = require("../Schema/organisateurSchema.js");
+const { PolygonNFTTransfers } = require("../Schema/polygonNFTTransfers.js");
+const { PolygonTransactions } = require("../Schema/polygonTransaction.js");
+const { Sexe } = require("../Schema/sexeSchema.js");
+const { Sportif } = require("../Schema/sportifSchema.js");
+const { Sport } = require("../Schema/sportSchema.js");
+const { Type } = require("../Schema/typeSchema.js");
  
 const PORT_FRONT = process.env.PORT_FRONT || 5000;
-const BDD = process.env.BDD 
+const BDD_FRONT = process.env.BDD_FRONT
 
+console.debug(`BDD_FRONT=${BDD_FRONT}`)
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -333,7 +334,7 @@ app.route("/type/:id")
       })
   })
 
-mongoose.connect(BDD, {
+mongoose.connect(BDD_FRONT, {
   autoIndex: true
 });
 app.listen(PORT_FRONT, function () {

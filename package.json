@@ -2,17 +2,20 @@
   "name": "bdd_mongo_mvp",
   "version": "1.0.0",
   "description": "",
-  "main": "servers.js",
+  "main": "",
   "scripts": {
-    "start": "nodemon servers.js",
+    "startBack": "nodemon Back/serversBack.js",
+    "startFront": "nodemon Front/serversFront.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "args-parser": "^1.3.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
     "express": "^4.18.2",
     "mongoose": "^6.7.3",
     "nodemon": "^2.0.20",

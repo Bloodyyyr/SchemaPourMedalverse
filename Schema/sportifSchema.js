@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const sportifSchema = new Schema({
+    _id: String,
     nom: String,
     prenom: String
 })

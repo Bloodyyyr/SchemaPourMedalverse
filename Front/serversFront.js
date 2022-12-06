@@ -35,7 +35,7 @@ app.route("/categorie")
       if (err) {
         console.log(err);
       }else {
-        console.log(categorie)
+        console.log(`categorie: ${categorie}`)
       }
     })
   })
@@ -44,7 +44,6 @@ app.route("/categorie")
       _id : MUUID.v4().toString('N'),
       nbrParticipants: req.body.nbrParticipants
     })
-    console.log(res)
     console.log("Post");
   })
 
@@ -65,7 +64,7 @@ app.route("/epreuve")
       if (err) {
         console.log(err);
       }else {
-        console.log(epreuve)
+        console.log(`epreuve: ${epreuve}`)
       }
     })
   })
@@ -87,7 +86,7 @@ app.route("/evenement")
       if (err) {
         console.log(err);
       }else {
-        console.log(evenement)
+        console.log(`evenement: ${evenement}`)
       }
     })
   })
@@ -109,7 +108,7 @@ app.route("/medaille")
       if (err) {
         console.log(err);
       }else {
-        console.log(medaille)
+          console.log(`medaille: ${medaille}`)
       }
     })
   })
@@ -131,7 +130,7 @@ app.route("/minted")
       if (err) {
         console.log(err);
       }else {
-        console.log(minted)
+        console.log(`minted: ${minted}`)
       }
     })
   })
@@ -153,7 +152,7 @@ app.route("/mvminted")
       if (err) {
         console.log(err);
       }else {
-        console.log(mvMinted)
+        console.log(`mvMinted: ${mvMinted}`)
       }
     })
   })
@@ -164,7 +163,9 @@ app.route("/mvminted/:to")
       if(err){
         console.log(err);
       }else{
-        console.log(MVMinted._id)
+        for(const element of MVMinted){
+          console.log(`MVMinted._id: ${element._id}`)
+        }
       }
     })
   })

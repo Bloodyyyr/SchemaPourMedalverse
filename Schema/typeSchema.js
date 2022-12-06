@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const typeSchema = new Schema({
+    _id: String,
     nom: String,
     nbrJoueur: Number
 })

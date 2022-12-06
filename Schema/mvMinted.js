@@ -2,20 +2,21 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const mvMintedSchema = new Schema({
-    logIndex: Number,
-    transactionHash: String,
+    _id: String,
+    log_index: Number,
+    transaction_hash: String,
     address: String,
-    blockHash: String,
-    blockNumber: Number,
-    blockTimestamp: Date,
+    block_hash: String,
+    block_number: Number,
+    block_timestamp: Date,
     confirmed: Boolean,
     medalId: String,
     royalty : String,
     royaltyDecimal: Number,
     to: String,
     tokenId: String,
-    tokenIdDecimal: Number,
-    transactionIndex: Number
+    tokenId_decimal: Number,
+    transaction_index: Number
 })
 
 const MVMinted = mongoose.model("MVMinted", mvMintedSchema, "MVMinted");

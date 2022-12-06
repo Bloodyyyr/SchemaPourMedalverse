@@ -2,18 +2,21 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const medailleSchema = new Schema({
+    _id: String,
+    _created_at: Date,
+    _updated_at: Date,
     dateResultat: Date,
-    sportifId: String,
-    evenementId: String,
-    sportId: String,
-    sexeId: String,
-    epreuveId: String,
-    categorieId: String,
-    typeId: String,
+    _p_sportifId: String,
+    _p_evenementId: String,
+    _p_sportId: String,
+    _p_sexeId: String,
+    _p_epreuveId: String,
+    _p_categorieId: String,
+    _p_typeId: String,
     nom: String,
     minted: Number,
     uriMetadata: String,
-    uriImage: String,
+    _p_uriImage: String,
     tokenId: Number,
     passPhrase: String,
     to: String,
@@ -21,7 +24,7 @@ const medailleSchema = new Schema({
     hasVideo: Boolean,
     classement: Number,
     classementCatergorie: Number,
-    uriVideo: String
+    _p_uriVideo: String
 })
 
 const Medaille = mongoose.model("Medaille", medailleSchema, "Medaille")

@@ -2,22 +2,25 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const polygonTransactionsSchema = new Schema({
+    _id: String,
     fromAddress: String,
     hash: String,
-    toAddress: String,
-    blockHash: String,
-    blockNumber: Number,
-    blockTimestamp: Date,
+    to_address: String,
+    _created_at: Date,
+    _updated_at: Date,
+    block_hash: String,
+    block_number: Number,
+    block_timestamp: Date,
     confirmed: Boolean,
     decimal: Number,
     gas: Number,
-    gasPrice: Number,
+    gas_price: Number,
     input: String,
     nonce: Number,
-    receiptCumulativeGas: Number,
-    receiptGasUsed: Number,
-    receiptStatus: Number,
-    transactionIndex: Number,
+    receipt_cumulative_gas_used: Number,
+    receipt_gas_used: Number,
+    receipt_status: Number,
+    transaction_index: Number,
     value: String
 })
 

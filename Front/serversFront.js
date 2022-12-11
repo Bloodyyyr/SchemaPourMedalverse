@@ -39,13 +39,7 @@ app.route("/categorie")
       }
     })
   })
-  .post(function (req, res) {
-    Categorie.create({
-      _id : MUUID.v4().toString('N'),
-      nbrParticipants: req.body.nbrParticipants
-    })
-    console.log("Post");
-  })
+  
 
 app.route("/categorie/:id")
   .get(function (req, res) { 
@@ -187,7 +181,7 @@ app.route("/organisateur")
       if (err) {
         console.log(err);
       }else {
-        console.log(organisateur)
+        console.log(`organisateur: ${organisateur}`)
       }
     })
   })
@@ -209,7 +203,7 @@ app.route("/polygonNFTTransfers")
       if (err) {
         console.log(err);
       }else {
-        console.log(polygonNFTTransfers)
+        console.log(`polygonNFTTransfers: ${polygonNFTTransfers}`)
       }
     })
   })
@@ -231,7 +225,7 @@ app.route("/polygonTransactions")
       if (err) {
         console.log(err);
       }else {
-        console.log(polygonTransactions)
+        console.log(`polygonTransactions: ${polygonTransactions}`)
       }
     })
   })
@@ -253,7 +247,7 @@ app.route("/sexe")
       if (err) {
         console.log(err);
       }else {
-        console.log(sexe)
+        console.log(`sexe: ${sexe}`)
       }
     })
   })

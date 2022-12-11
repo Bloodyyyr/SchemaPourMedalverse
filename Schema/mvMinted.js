@@ -12,7 +12,7 @@ const mvMintedSchema = new Schema({
     confirmed: Boolean,
     medalId: String,
     royalty : String,
-    royaltyDecimal: Number,
+    royalty_decimal: Number,
     to: String,
     tokenId: String,
     tokenId_decimal: Number,
